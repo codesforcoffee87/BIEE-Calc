@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form" id="center">
+        <header>
+            <nav></nav>
+            <h1>Simplified Business Income</h1>
+            <h2>With Extra Expense</h2>
+            <h2>Limit Calculator</h2>
+            <p>This tools will give you a general sense of where your Business Income and Extra Expense limit should be.</p>
+        </header>
+        <section>
+            <h3>Exposure Calculation</h3>
+            <form name="sbirrform" action="" method="GET" id="formCenter">
+                <label for="nincome" class="formFormatting">
+                    Net Income (Before Tax)
+                    <input type="numeric" id="nincome" name="nincome" step="any" value="0.00">
+                </label>
+                <label for="aexpense" class="formFormatting">
+                    All Expenses (Including payroll, not including cost of goods sold)
+                    <input type="numeric" id="aexpense" name="aexpense" step="any" value="0.00">
+                </label>
+                <label for="egrowth" class="formFormatting">
+                    Expected Growth for next 12 months (shown as a factor of 1.00)
+                    <input type="numeric" id="egrowth" name="egrowth" step="any" value="1.0">
+                </label>
+                <label for="eexpense" class="formFormatting">
+                    Extra Expense (Cost to move/operate from new location)
+                    <input type="numeric" id="eexpense" name="eexpense" step="any" value="0.00">
+                    </label>
+                <h3 class="formFormatting">Additional Required Information</h3>
+                <label for="tgsales" class="formFormatting">
+                    Total Gross Sales
+                    <input type="numeric" id="tgsales" name="tgsales" step="any" value="0.00">
+                </label>
+                <label for="tpayroll" class="formFormatting">
+                    Total Payroll
+                    <input type="numeric" id="tpayroll" name="tpayroll" step="any" value="0.00">
+                </label>
+                <label for="mpindemnity" class="formFormatting">
+                    Maximum Period of Recovery (Shown in months)
+                    <input type="numeric" id="mpindemnity" name="mpindemnity" step="any" value="12">
+                </label>
+                <input type="button" name="button" value="calculate" onClick="results(this.form)" id="calc">
+            </form>
+            <hr>
+            <div> 
+                <span id="est_limit">0</span>
+            </div>
+        </section>
+    </div>
+
+    <!--- Modal Section-->
+<!---
+    <div class="bg-modal">
+        <div class="modal-content">
+            <h3>Net Income</h3>
+            <p>Description</p>
+        </div>
+    </div>
+    --->
+</body>
+<script src="assets/sbiee.js"></script>
+</html>
